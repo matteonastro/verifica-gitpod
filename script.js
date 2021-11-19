@@ -39,30 +39,30 @@ function buttonfunction1(){
 function buttonspirale(){
 
     var canvas = document.getElementById("canvas1").getContext("2d");
-
+    
     for(let i =0; i<=150;i=i+10){
-        ctx.fillStyle="black";
-        ctx.filerect(i,0,10,10)
+        canvas.fillStyle="black";
+        canvas.fillRect(i,0,10,10)
     }
     for(let i =0; i<=150;i=i+10){
-        ctx.fillStyle="black";
-        ctx.filerect(150,i,10,10)
+        canvas.fillStyle="black";
+        canvas.fillRect(150,i,10,10)
     }
     for(let i =30; i<=150;i=i+10){
-        ctx.fillStyle="black";
-        ctx.filerect(i,150,10,10)
+        canvas.fillStyle="black";
+        canvas.fillRect(i,150,10,10)
     }
     for(let i =150; i>=50;i=i-10){
-        ctx.fillStyle="black";
-        ctx.filerect(30,i,10,10)
+        canvas.fillStyle="black";
+        canvas.fillRect(30,i,10,10)
     }
     for(let i =30; i<=100;i=i+10){
-        ctx.fillStyle="black";
-        ctx.filerect(i,50,10,10)
+        canvas.fillStyle="black";
+        canvas.fillRect(i,50,10,10)
     }
     for(let i =50; i<=100;i=i+10){
-        ctx.fillStyle="black";
-        ctx.filerect(100,1,10,10)
+        canvas.fillStyle="black";
+        canvas.fillRect(100,1,10,10)
     }
     
 
