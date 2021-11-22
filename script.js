@@ -36,35 +36,35 @@ function buttonfunction1(){
 
     
 }
-function buttonspirale(){
 
-    var canvas = document.getElementById("canvas1").getContext("2d");
-    
-    for(let i =0; i<=150;i=i+10){
-        canvas.fillStyle="black";
-        canvas.fillRect(i,0,10,10)
-    }
-    for(let i =0; i<=150;i=i+10){
-        canvas.fillStyle="black";
-        canvas.fillRect(150,i,10,10)
-    }
-    for(let i =30; i<=150;i=i+10){
-        canvas.fillStyle="black";
-        canvas.fillRect(i,150,10,10)
-    }
-    for(let i =150; i>=50;i=i-10){
-        canvas.fillStyle="black";
-        canvas.fillRect(30,i,10,10)
-    }
-    for(let i =30; i<=100;i=i+10){
-        canvas.fillStyle="black";
-        canvas.fillRect(i,50,10,10)
-    }
-    for(let i =50; i<=100;i=i+10){
-        canvas.fillStyle="black";
-        canvas.fillRect(100,1,10,10)
-    }
-    
+    var stato = 0;
 
+function buttonFunction() {
+  var canvas = document.getElementById("canvas1");
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "purple";
+  ctx.fillRect(0, 0, 200, 200);
+  ctx.fillStyle = "#33FFDD";
+
+
+  let len = 190;
+  let larg = 5;
+
+  for (i = 0; i < len/(2*larg); i += 2) {
+    
+    //linee orizzontali metà sopra
+    ctx.fillRect(i*larg, i*larg, len-i*2*larg, larg);
+    //linee orizzontali metà sotto
+    ctx.fillRect(i*larg+larg, len - i*larg, len-i*2*larg-larg, larg);
+
+    //Linee verticali metà dx
+    ctx.fillRect(len - i*larg, i*larg, larg , len-i*2*larg+larg);
+    //Linee verticali metà sx
+    ctx.fillRect(i*larg+larg, i*larg + 2*larg, larg , len-i*2*larg-2*larg);
+  }
 }
+
+    
+
+
 
